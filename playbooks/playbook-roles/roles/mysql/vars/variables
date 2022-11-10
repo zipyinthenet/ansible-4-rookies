@@ -1,0 +1,5 @@
+mysql_packages:
+  - mysql
+  - mysql-server
+db_config:
+  - db_name: db1
