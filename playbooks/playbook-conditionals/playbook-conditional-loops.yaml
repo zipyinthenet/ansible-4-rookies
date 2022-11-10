@@ -10,11 +10,11 @@
         - name: apache
           required: False
   tasks:
-  - name: Install "" on Debian
+  - name: Install "{{ item.name }}" on Debian
     apt:
-      name: ""
+      name: "{{ item.name }}"
       state: present
 
     when: item.required == True
 
-    loop: ""
+    loop: "{{ packages }}"
