@@ -1,0 +1,17 @@
+---
+- name: Create users
+  hosts: localhost
+  tasks:
+   - user: name= " { { item } } " state=present
+   - user: name=george state=present
+   - user: name=ravi state=present
+   - user: name=mani state=present
+   - user: name=kiran state=present
+   - user: name=jazlan state=present
+   - user: name=emaan state=present
+   - user: name=mazin state=present
+   - user: name=izaan state=present
+   - user: name=mike state=present
+   - user: name=menaal state=present
+   - user: name=shoeb state=present
+   - user: name=rani state=present
