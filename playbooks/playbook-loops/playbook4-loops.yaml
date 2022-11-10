@@ -1,0 +1,26 @@
+---
+- name: Create users
+  hosts: localhost
+  tasks:
+   - user: name=‘{{ item.name }}’ state=present uid='{{item.uid}}'
+     loop:
+       - name: joe    - { name: joe, uid: 1010 }
+         uid: 1010
+       - name: george - { name: george, uid: 1011 }
+         uid: 1011
+       - name: ravi   - { name: ravi, uid: 1012 }
+         uid: 1012
+       - name: mani   - { name: mani, uid: 1013 }
+         uid: 1013
+       - name: kiran  - { name: kiran, uid: 1014 }
+         uid: 1014
+       - name: jazlan - { name: jazlan, uid: 1015 }
+         uid: 1015
+       - name: emaan  - { name: emaan, uid: 1016 }
+         uid: 1016
+       - name: mazin  - { name: mazin, uid: 1017 }
+         uid: 1017
+       - name: izaan  - { name: izaan, uid: 1018 }
+         uid: 1018
+       - name: mike   - { name: mike, uid: 1019 }
+         uid: 1019
