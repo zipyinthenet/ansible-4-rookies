@@ -8,7 +8,7 @@
 ansible target1 -m ping -i inventory.txt
 ```
 
-## Lanzar modulos
+## Lanzar playbooks
 
 ```bash
 ansible-playbooks playbookFile -i inventory.txt
