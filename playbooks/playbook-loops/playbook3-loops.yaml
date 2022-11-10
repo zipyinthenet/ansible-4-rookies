@@ -1,0 +1,23 @@
+---
+- name: Create users
+  hosts: localhost
+  tasks:
+
+  - var: item=joe
+    user: name= “{{ item }}” state=present
+  - var: item=george
+    user: name= “{{ item }}” state=present
+  - var: item=ravi
+    user: name= “{{ item }}” state=present
+  - var: item=mani
+    user: name= “{{ item }}” state=present
+  - var: item=kiran
+    user: name= “{{ item }}” state=present
+  - var: item=jazlan
+    user: name= “{{ item }}” state=present
+  - var: item=emaan
+    user: name= “{{ item }}” state=present
+  - var: item=mazin
+    user: name= “{{ item }}” state=present
+  - var: item=izaan
+    user: name= “{{ item }}” state=present
