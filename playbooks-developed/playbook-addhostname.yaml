@@ -1,0 +1,8 @@
+---
+- name: add line to hosts file
+  hosts: all
+  tasks:
+    - name: add line to hosts file
+      lineinfile:
+        path: /etc/hosts
+        line: "{{ansible_default_ipv4.gateway}}" "{{ansible_hostname}}".domain.tld
