@@ -1,0 +1,9 @@
+---
+- name: add line file motd
+  hosts: all
+  tasks:
+    - name: add hostname to file motd
+      lineinfile:
+        path: /etc/motd
+        line: Servidor de tipo "{{ansible_hostname}}"
+        create: yes
