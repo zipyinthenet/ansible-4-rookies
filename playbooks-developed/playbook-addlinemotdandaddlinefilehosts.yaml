@@ -1,0 +1,22 @@
+---
+- name: añadir linea en fichero motd y/o añadir linea en fichero hosts  
+  hosts: all
+  become: yes
+
+  vars:
+      ipv4_gateway: "{{ ansible_default_ipv4.gateway }}"
+      hostname: "{{ ansible_hostname }}"
+  tasks:
+    - name: añadir linea hostname en fichero mot
+      lineinfile:
+        path: /etc/motd
+        line: 'Servidor de tipo {{ hostname }}'
+        create: yes
+      tags:
+      - task-motd
+    - name: añadir linea gateway mas fqdn en fichero hosts
+      lineinfile:
+        path: /etc/hosts
+        line: '{{ ipv4_gateway }} {{ hostname }}.domain.tld'
+      tags:
+      - task-filehosts
