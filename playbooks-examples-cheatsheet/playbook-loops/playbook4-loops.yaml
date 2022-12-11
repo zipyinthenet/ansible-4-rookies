@@ -4,23 +4,23 @@
   tasks:
    - user: name=‘{{ item.name }}’ state=present uid='{{item.uid}}'
      loop:
-       - name: joe    - { name: joe, uid: 1010 }
+       - name: joe
          uid: 1010
-       - name: george - { name: george, uid: 1011 }
+       - name: george
          uid: 1011
-       - name: ravi   - { name: ravi, uid: 1012 }
+       - name: ravi
          uid: 1012
-       - name: mani   - { name: mani, uid: 1013 }
+       - name: mani
          uid: 1013
-       - name: kiran  - { name: kiran, uid: 1014 }
+       - name: kiran
          uid: 1014
-       - name: jazlan - { name: jazlan, uid: 1015 }
+       - name: jazlan
          uid: 1015
-       - name: emaan  - { name: emaan, uid: 1016 }
+       - name: emaan
          uid: 1016
-       - name: mazin  - { name: mazin, uid: 1017 }
+       - name: mazin
          uid: 1017
-       - name: izaan  - { name: izaan, uid: 1018 }
+       - name: izaan
          uid: 1018
-       - name: mike   - { name: mike, uid: 1019 }
+       - name: mike
          uid: 1019
