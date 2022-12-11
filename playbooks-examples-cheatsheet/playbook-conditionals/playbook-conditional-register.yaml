@@ -2,10 +2,12 @@
 - name: Check status of a service and email if its down
   hosts: localhost
   tasks:
-    - command: service httpd status
+    - name: guardar resultado status httpd service
+      command: service httpd status
       register: result
 
-    - mail:
+    - name: send mail if service is down 
+      mail:
        to: admin@company.com
        subject: Service Alert
        body: Httpd Service is down
