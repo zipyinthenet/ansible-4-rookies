@@ -2,4 +2,5 @@
 - name: cat hostname
   hosts: all
   tasks:
-    - debug: msg="{{ansible_hostname}}"
+    - name: mostrar mensaje mediante debug module
+      debug: msg="{{ansible_hostname}}"
