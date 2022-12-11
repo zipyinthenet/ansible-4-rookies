@@ -1,0 +1,8 @@
+[grupo1]
+web  server1.company.com ansible_conection=ssh ansible_user=root ansible_ssh_pass=p@$$w0rd!!
+db   server2.company.com ansible_conection=winrm ansible_user=admin ansible_ssh_pass=p@$$w0rd!!
+[grupo2]
+mail server3.company.com ansible_conection=ssh ansible_port=56826 ansible_user=root ansible_ssh_pass=p@$$w0rd!!
+web2 server4.company.com ansible_conection=winrm ansible_user=admin ansible_ssh_pass=p@$$w0rd!!
+[grupo3]
+localhost ansible_conection=localhost
