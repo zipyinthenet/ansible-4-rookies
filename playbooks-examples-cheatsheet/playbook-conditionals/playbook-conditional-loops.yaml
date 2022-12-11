@@ -2,13 +2,13 @@
 - name: Install Softwares
   hosts:
   vars:
-     packages:
-        - name: nginx
-          required: True
-        - name: mysql
-          required: True
-        - name: apache
-          required: False
+    packages:
+      - name: nginx
+        required: True
+      - name: mysql
+        required: True
+      - name: apache
+        required: False
   tasks:
     - name: Install "{{ item.name }}" on Debian
       apt:
