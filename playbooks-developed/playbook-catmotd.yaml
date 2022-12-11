@@ -5,4 +5,6 @@
     - name: return motd to registered var
       command: cat /etc/motd
       register: mymotd
-    - debug: msg="{{mymotd.stdout}}"
+
+    - name: mostrar mensaje mediante debug module  
+      debug: msg="{{mymotd.stdout}}"
