@@ -12,4 +12,4 @@ ansible target1 -m ping -i inventory.txt
 
 ```bash
 ansible-playbooks playbookFile -i inventory.txt
-``
+```
