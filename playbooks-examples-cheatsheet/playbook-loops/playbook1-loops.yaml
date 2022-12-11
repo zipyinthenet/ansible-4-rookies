@@ -2,7 +2,7 @@
 - name: Create users
   hosts: localhost
   tasks:
-   - user: name= " { { item } } " state=present
+   - user: name=joe state=present
    - user: name=george state=present
    - user: name=ravi state=present
    - user: name=mani state=present
