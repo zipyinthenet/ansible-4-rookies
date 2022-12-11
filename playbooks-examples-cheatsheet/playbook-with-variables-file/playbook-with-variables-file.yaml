@@ -1,6 +1,6 @@
 ---
 - name: Set Firewall Configurations
-  hosts: target1
+  hosts: web
   become: yes
 
   vars_files:
