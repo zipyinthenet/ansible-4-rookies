@@ -2,4 +2,5 @@
 - name: cat ipv4 gateway
   hosts: all
   tasks:
-    - debug: msg="{{ansible_default_ipv4.gateway}}"
+    - name: mostrar mensaje mediante debug module
+      debug: msg="{{ansible_default_ipv4.gateway}}"
