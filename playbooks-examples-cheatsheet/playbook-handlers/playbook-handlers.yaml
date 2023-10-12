@@ -1,0 +1,15 @@
+---
+- name: x
+  hosts: all
+  tasks:
+    - name: copy application code
+      copy:
+        src: aoo_code/
+        dest: /opt/application/
+      notify: Restart application service
+  
+  handlers:
+    - name: Restart application service
+      service:
+        name: application_service
+        state: restarted
