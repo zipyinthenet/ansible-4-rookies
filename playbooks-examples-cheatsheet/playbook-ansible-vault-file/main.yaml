@@ -1,12 +1,16 @@
 ---
-- hosts: all
+- hosts: "{{ host }}"
+
+  become: yes
+  become_method: sudo
+  gather_facts: no
+
   tasks:
-    - name: Copy file to tmp directory
+    - name: copy vault file to dest
       copy:
-        src: fichero.conf
-        dest: /tmp/fichero.conf
-        decrypt: yes
+        src: ./files/fichero.encrypt
+        dest: /tmp/fichero2.conf
         owner: user
         group: usergroup
-        mode: 400
-        backup: no
+        mode: '0644'
+        decrypt: true
