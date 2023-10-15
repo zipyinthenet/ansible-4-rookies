@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks:
+    - name: Copy file to tmp directory
+      copy:
+        src: fichero.conf
+        dest: /tmp/fichero.conf
+        decrypt: yes
+        owner: user
+        group: usergroup
+        mode: 400
+        backup: no
