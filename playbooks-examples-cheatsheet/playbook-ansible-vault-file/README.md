@@ -1,2 +1,2 @@
 # encriptar fichero
-ansible-vault encrypt fichero.conf
+ansible-vault encrypt --ask-vault-pass fichero.conf
