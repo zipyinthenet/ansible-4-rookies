@@ -1,0 +1,26 @@
+---
+- hosts: "{{ host }}"
+
+  become: yes
+  become_method: sudo
+  gather_facts: no
+  
+  vars:
+    ad_password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          35306237653332343864633431316364313932653634646637363461383739376232366230663663
+          6338303866323931323034323037343938346134306331350a616231613865346332633330326334
+          63376430386238653230336238636662623235643837383332396466613662383439653761343164
+          6564396563646234300a633131626239663363306431636265633838343837376336643935326339
+          6461
+
+  tasks:
+    - name: retocar fichero /ejemplofichero
+      lineinfile:
+        dest: /ejemplofichero
+        regexp: "{{item.regexp}}"
+        line: "{{item.line}}"
+        state: present
+      with_items:
+        - regexp: "^passworddelAD:"
+          line: "passworddelAD: {{ ad_password }}"
